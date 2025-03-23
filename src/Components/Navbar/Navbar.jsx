@@ -11,6 +11,7 @@ import {
   ListItemButton,
   ListItemText,
   Box,
+  Container,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
@@ -29,14 +30,14 @@ const Navbar = () => {
   ];
 
   return (
-    <>
-      <AppBar position="static" sx={{ bgcolor: "#121212" }}>
+    <AppBar position="static" sx={{ bgcolor: "#121212" }}>
+      <Container maxWidth="lg">
         <Toolbar>
           <Typography
             variant="h6"
             sx={{ flexGrow: 1, fontWeight: "bold", color: "white" }}
           >
-            Farasat Ali
+            <span style={{ color: "#007BFF" }}>Farasat</span> Ali
           </Typography>
 
           <Box sx={{ display: { xs: "none", md: "block" } }}>
@@ -47,7 +48,7 @@ const Navbar = () => {
                 to={item.path}
                 sx={{
                   color: "white",
-                  "&:hover": { color: "#007BFF" },
+                  "&:hover": { color: "#A3CFF7" },
                   "&.active": { color: "#007BFF", fontWeight: "bold" },
                 }}
               >
@@ -65,7 +66,7 @@ const Navbar = () => {
             <MenuIcon />
           </IconButton>
         </Toolbar>
-      </AppBar>
+      </Container>
 
       <Drawer anchor="right" open={mobileOpen} onClose={handleDrawerToggle}>
         <List
@@ -96,7 +97,7 @@ const Navbar = () => {
           ))}
         </List>
       </Drawer>
-    </>
+    </AppBar>
   );
 };
 

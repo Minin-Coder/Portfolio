@@ -1,6 +1,11 @@
 import React from "react";
-import { Box, Grid, Typography, Button, Container } from "@mui/material";
+import { Box, Grid, Typography, Container, IconButton } from "@mui/material";
 import profileImage from "../../assets/profile.png";
+
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import UpworkLogo from "../../assets/upwork.png";
 
 const HeroSection = () => {
   return (
@@ -13,34 +18,45 @@ const HeroSection = () => {
         color: "white",
       }}
     >
-      <Container maxWidth="lg">
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={6} display="flex" justifyContent="center">
+      <Container maxWidth="lg" sx={{ paddingTop: "20px" }}>
+        <Grid container spacing={4} alignItems="top">
+          <Grid
+            item
+            xs={12}
+            md={6}
+            display="flex"
+            justifyContent="center"
+            sx={{ paddingLeft: "0px !important", paddingRight: "40px" }}
+          >
             <Box
               component="img"
               src={profileImage}
               alt="Profile"
               sx={{
-                width: { xs: "90%", sm: "100%", md: "100%" },
+                width: { xs: "80%", sm: "90%", md: "100%" },
                 height: "auto",
-                borderRadius: "50%",
-                border: "4px solid #007BFF",
-                maxWidth: "300px", // Prevents image from growing too large
+                borderRadius: "0%",
+                filter: "drop-shadow(0px -5px 5px #fff)",
               }}
             />
           </Grid>
 
-          {/* Right Side - Title, Paragraph, Button */}
           <Grid item xs={12} md={6} textAlign={{ xs: "center", md: "left" }}>
+            <Typography
+              variant="body1"
+              sx={{ mt: 1, color: "#A3CFF7", paddingTop: "70px" }}
+            >
+              Welcome to my World
+            </Typography>
             <Typography
               variant="h3"
               sx={{
                 fontWeight: "bold",
-                color: "#007BFF",
-                fontSize: { xs: "2rem", sm: "2.5rem", md: "3rem" }, // Responsive font sizes
+                color: "#ffff",
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
               }}
             >
-              Hi, I'm Farasat Ali
+              Hi, I'm <span style={{ color: "#007BFF" }}>Farasat Ali</span>
             </Typography>
             <Typography
               variant="h5"
@@ -53,20 +69,54 @@ const HeroSection = () => {
               A Frontend Developer specializing in React.js
             </Typography>
             <Typography variant="body1" sx={{ mt: 1, color: "#A3CFF7" }}>
-              Passionate about building modern, responsive, and visually
-              appealing web applications.
+              Crafting sleek, responsive, and immersive web experiences with a
+              designer’s eye and a developer’s precision. Proficient in HTML5,
+              CSS3, Bootstrap5, JavaScript, React.js, Next.js, and CMS
+              development using Webflow & Framer. Passionate about turning ideas
+              into seamless, high-performing digital solutions.
             </Typography>
-            <Button
-              variant="contained"
-              sx={{
-                mt: 3,
-                bgcolor: "#007BFF",
-                color: "white",
-                "&:hover": { bgcolor: "#0056b3" },
-              }}
-            >
-              Contact Me
-            </Button>
+
+            <Box sx={{ display: "flex", gap: 2, paddingTop: "20px" }}>
+              <IconButton
+                component="a"
+                href="https://www.linkedin.com/"
+                target="_blank"
+                sx={{ color: "#fff", borderRadius: "50%" }}
+              >
+                <LinkedInIcon sx={{ fontSize: "30px", borderRadius: "50%" }} />
+              </IconButton>
+
+              <IconButton
+                component="a"
+                href="https://www.upwork.com/"
+                target="_blank"
+                sx={{ color: "#6FDA44" }}
+              >
+                <img
+                  src={UpworkLogo}
+                  alt="Upwork"
+                  style={{ width: 30, height: 30 }}
+                />
+              </IconButton>
+
+              <IconButton
+                component="a"
+                href="https://github.com/"
+                target="_blank"
+                sx={{ color: "#fff" }}
+              >
+                <GitHubIcon sx={{ fontSize: "30px" }} />
+              </IconButton>
+
+              <IconButton
+                component="a"
+                href="https://wa.me/yourphonenumber"
+                target="_blank"
+                sx={{ color: "#fff" }}
+              >
+                <WhatsAppIcon sx={{ fontSize: "30px" }} />
+              </IconButton>
+            </Box>
           </Grid>
         </Grid>
       </Container>
