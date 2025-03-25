@@ -25,8 +25,6 @@ const AboutMe = () => {
           <img src={aboutImg} alt="About Me" style={{ width: "100%" }} />
         </Grid>
       </Grid>
-
-      {/* Second Row */}
       <Grid
         container
         spacing={4}
@@ -34,7 +32,6 @@ const AboutMe = () => {
         alignItems="center"
         justifyContent="center"
       >
-        {/* Left Column - Personal Details */}
         <Grid item xs={12} md={6} textAlign="left">
           <Typography variant="h4" fontWeight="bold" color="#121212" mb={2}>
             Personal Details
@@ -55,8 +52,6 @@ const AboutMe = () => {
             <b>Experience:</b> 4+ Years in Front-end Development
           </Typography>
         </Grid>
-
-        {/* Right Column - Counters */}
         <Grid item xs={12} md={6}>
           <Grid container spacing={2} justifyContent="center">
             {[

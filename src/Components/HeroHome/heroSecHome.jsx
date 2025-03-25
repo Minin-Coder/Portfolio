@@ -1,11 +1,7 @@
 import React from "react";
-import { Box, Grid, Typography, Container, IconButton } from "@mui/material";
-import profileImage from "../../assets/profile.png";
+import { Box, Grid, Typography, Container, Button } from "@mui/material";
 
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import WhatsAppIcon from "@mui/icons-material/WhatsApp";
-import UpworkLogo from "../../assets/upwork.png";
+import profileImage from "../../assets/Profile.png";
 
 const HeroSection = () => {
   return (
@@ -14,19 +10,101 @@ const HeroSection = () => {
         width: "100%",
         display: "flex",
         alignItems: "center",
+        justifyContent: "center",
         backgroundColor: "#121212",
         color: "white",
+        paddingBottom: "50px",
       }}
     >
-      <Container maxWidth="lg" sx={{ paddingTop: "20px" }}>
-        <Grid container spacing={4} alignItems="top">
+      <Container maxWidth="lg">
+        <Grid container spacing={4} alignItems="center">
+          <Grid item xs={12} md={7} textAlign={{ xs: "center", md: "left" }}>
+            <Typography
+              variant="h3"
+              sx={{
+                fontWeight: "bold",
+                color: "#fff",
+                fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
+              }}
+            >
+              <Box
+                component="span"
+                sx={{
+                  background: "linear-gradient(135deg, #007BFF, #00B4DB)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Hello, I'm Farasat,
+              </Box>{" "}
+              Web Developer based in Pakistan.
+            </Typography>
+
+            <Typography
+              variant="body1"
+              sx={{ mt: 1, color: "#fff", paddingTop: "20px" }}
+            >
+              Crafting responsive and high-performing web experiences.
+              Specializing in front-end development and CMS solutions with
+              Webflow & Framer.
+            </Typography>
+
+            <Box
+              sx={{
+                display: "flex",
+                gap: 2,
+                pt: 3,
+                justifyContent: { xs: "center", md: "flex-start" },
+              }}
+            >
+              <Button
+                variant="contained"
+                sx={{
+                  background: "linear-gradient(135deg, #007BFF, #00B4DB)",
+                  color: "white",
+                  padding: "7px 30px",
+                  borderRadius: "50px",
+                  border: "1px solid transparent",
+
+                  "&:hover": {
+                    background: "Transparent",
+                    color: "white",
+                    border: "1px solid white",
+                  },
+                }}
+              >
+                Get in Touch
+              </Button>
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "transparent",
+                  color: "white",
+                  border: "1px solid white",
+                  padding: "7px 30px",
+                  borderRadius: "50px",
+                  "&:hover": {
+                    background: "linear-gradient(135deg, #007BFF, #00B4DB)",
+                    color: "white",
+                    border: "1px solid transparent",
+                  },
+                }}
+              >
+                <b>View All Works</b>
+              </Button>
+            </Box>
+          </Grid>
+
           <Grid
             item
             xs={12}
-            md={6}
+            md={5}
             display="flex"
             justifyContent="center"
-            sx={{ paddingLeft: "0px !important", paddingRight: "40px" }}
+            sx={{
+              paddingLeft: "0px !important",
+              paddingRight: "0px !important",
+            }}
           >
             <Box
               component="img"
@@ -36,87 +114,8 @@ const HeroSection = () => {
                 width: { xs: "80%", sm: "90%", md: "100%" },
                 height: "auto",
                 borderRadius: "0%",
-                filter: "drop-shadow(0px -5px 5px #fff)",
               }}
             />
-          </Grid>
-
-          <Grid item xs={12} md={6} textAlign={{ xs: "center", md: "left" }}>
-            <Typography
-              variant="body1"
-              sx={{ mt: 1, color: "#A3CFF7", paddingTop: "70px" }}
-            >
-              Welcome to my World
-            </Typography>
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: "bold",
-                color: "#ffff",
-                fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
-              }}
-            >
-              Hi, I'm <span style={{ color: "#007BFF" }}>Farasat Ali</span>
-            </Typography>
-            <Typography
-              variant="h5"
-              sx={{
-                mt: 2,
-                color: "#B0B0B0",
-                fontSize: { xs: "1.2rem", sm: "1.5rem" },
-              }}
-            >
-              A Frontend Developer specializing in React.js
-            </Typography>
-            <Typography variant="body1" sx={{ mt: 1, color: "#A3CFF7" }}>
-              Crafting sleek, responsive, and immersive web experiences with a
-              designer’s eye and a developer’s precision. Proficient in HTML5,
-              CSS3, Bootstrap5, JavaScript, React.js, Next.js, and CMS
-              development using Webflow & Framer. Passionate about turning ideas
-              into seamless, high-performing digital solutions.
-            </Typography>
-
-            <Box sx={{ display: "flex", gap: 2, paddingTop: "20px" }}>
-              <IconButton
-                component="a"
-                href="https://www.linkedin.com/"
-                target="_blank"
-                sx={{ color: "#fff", borderRadius: "50%" }}
-              >
-                <LinkedInIcon sx={{ fontSize: "30px", borderRadius: "50%" }} />
-              </IconButton>
-
-              <IconButton
-                component="a"
-                href="https://www.upwork.com/"
-                target="_blank"
-                sx={{ color: "#6FDA44" }}
-              >
-                <img
-                  src={UpworkLogo}
-                  alt="Upwork"
-                  style={{ width: 30, height: 30 }}
-                />
-              </IconButton>
-
-              <IconButton
-                component="a"
-                href="https://github.com/"
-                target="_blank"
-                sx={{ color: "#fff" }}
-              >
-                <GitHubIcon sx={{ fontSize: "30px" }} />
-              </IconButton>
-
-              <IconButton
-                component="a"
-                href="https://wa.me/yourphonenumber"
-                target="_blank"
-                sx={{ color: "#fff" }}
-              >
-                <WhatsAppIcon sx={{ fontSize: "30px" }} />
-              </IconButton>
-            </Box>
           </Grid>
         </Grid>
       </Container>

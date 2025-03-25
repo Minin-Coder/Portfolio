@@ -30,17 +30,30 @@ const Navbar = () => {
   ];
 
   return (
-    <AppBar position="static" sx={{ bgcolor: "#121212" }}>
+    <AppBar position="static" sx={{ bgcolor: "#121212", boxShadow: "none" }}>
       <Container maxWidth="lg">
-        <Toolbar>
-          <Typography
-            variant="h6"
-            sx={{ flexGrow: 1, fontWeight: "bold", color: "white" }}
-          >
-            <span style={{ color: "#007BFF" }}>Farasat</span> Ali
+        <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
+          <Typography variant="h6" sx={{ fontWeight: "bold", color: "white" }}>
+            <Box
+              component="span"
+              sx={{
+                background:
+                  "linear-gradient(135deg, #007BFF, #00B4DB, #00B4DB)",
+                WebkitBackgroundClip: "text",
+                WebkitTextFillColor: "transparent",
+              }}
+            >
+              Farasat Ali
+            </Box>
           </Typography>
 
-          <Box sx={{ display: { xs: "none", md: "block" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "none", md: "flex" },
+              justifyContent: "center",
+            }}
+          >
             {menuItems.map((item) => (
               <Button
                 key={item.text}
@@ -48,13 +61,32 @@ const Navbar = () => {
                 to={item.path}
                 sx={{
                   color: "white",
-                  "&:hover": { color: "#A3CFF7" },
+                  mx: 2,
+                  "&:hover": { color: "#007BFF" },
                   "&.active": { color: "#007BFF", fontWeight: "bold" },
                 }}
               >
                 {item.text}
               </Button>
             ))}
+          </Box>
+
+          <Box sx={{ display: { xs: "none", md: "block" } }}>
+            <Button
+              variant="contained"
+              sx={{
+                backgroundColor: "white",
+                color: "#0056b3",
+                borderRadius: "50px",
+                padding: "7px 30px",
+                "&:hover": {
+                  background: "linear-gradient(135deg, #0056b3, #008CBA)",
+                  color: "white",
+                },
+              }}
+            >
+              <b>Let’s talk</b>
+            </Button>
           </Box>
 
           <IconButton
@@ -95,6 +127,18 @@ const Navbar = () => {
               </ListItemButton>
             </ListItem>
           ))}
+          <ListItem sx={{ justifyContent: "center", mt: 2 }}>
+            <Button
+              variant="contained"
+              sx={{
+                bgcolor: "#007BFF",
+                color: "white",
+                "&:hover": { bgcolor: "#0056b3" },
+              }}
+            >
+              Get in Touch
+            </Button>
+          </ListItem>
         </List>
       </Drawer>
     </AppBar>
