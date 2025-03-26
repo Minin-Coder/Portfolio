@@ -7,7 +7,6 @@ const HeroSection = () => {
   return (
     <Box
       sx={{
-        width: "100%",
         display: "flex",
         alignItems: "center",
         justifyContent: "center",
@@ -17,14 +16,37 @@ const HeroSection = () => {
       }}
     >
       <Container maxWidth="lg">
-        <Grid container spacing={4} alignItems="center">
-          <Grid item xs={12} md={7} textAlign={{ xs: "center", md: "left" }}>
+        <Grid
+          container
+          spacing={4}
+          alignItems="center"
+          sx={{ width: "100%", margin: "0px 0px" }}
+        >
+          <Grid
+            item
+            xs={12}
+            md={7}
+            textAlign={{ xs: "center", md: "left" }}
+            sx={{
+              paddingLeft: { xs: "0px !important", md: "20px !important" },
+              paddingRight: { xs: "0px !important", md: "20px !important" },
+              paddingTop: { xs: "0px !important", md: "20px !important" },
+            }}
+          >
             <Typography
               variant="h3"
               sx={{
                 fontWeight: "bold",
                 color: "#fff",
-                fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" },
+                fontSize: {
+                  xs: "1.5rem",
+                  sm: "2.5rem",
+                  md: "3.3rem",
+                  lg: "4rem",
+                },
+                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
+                marginLeft: { xs: "auto", md: "0px" },
+                marginRight: { xs: "auto", md: "0px" },
               }}
             >
               <Box
@@ -42,7 +64,15 @@ const HeroSection = () => {
 
             <Typography
               variant="body1"
-              sx={{ mt: 1, color: "#fff", paddingTop: "20px" }}
+              sx={{
+                mt: 1,
+                color: "#fff",
+                paddingTop: { xs: "5px", md: "20px" },
+                fontSize: { xs: "12px", sm: "16px", md: "1rem" },
+                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
+                marginLeft: { xs: "auto", md: "0px" },
+                marginRight: { xs: "auto", md: "0px" },
+              }}
             >
               Crafting responsive and high-performing web experiences.
               Specializing in front-end development and CMS solutions with
@@ -52,6 +82,7 @@ const HeroSection = () => {
             <Box
               sx={{
                 display: "flex",
+                flexWrap: "wrap",
                 gap: 2,
                 pt: 3,
                 justifyContent: { xs: "center", md: "flex-start" },
@@ -65,6 +96,7 @@ const HeroSection = () => {
                   padding: "7px 30px",
                   borderRadius: "50px",
                   border: "1px solid transparent",
+                  width: { xs: "200px", md: "auto" },
 
                   "&:hover": {
                     background: "Transparent",
@@ -73,7 +105,7 @@ const HeroSection = () => {
                   },
                 }}
               >
-                Get in Touch
+                Get&nbsp;in&nbsp;Touch
               </Button>
               <Button
                 variant="contained"
@@ -82,6 +114,7 @@ const HeroSection = () => {
                   color: "white",
                   border: "1px solid white",
                   padding: "7px 30px",
+                  width: { xs: "200px", md: "auto" },
                   borderRadius: "50px",
                   "&:hover": {
                     background: "linear-gradient(135deg, #007BFF, #00B4DB)",
@@ -90,7 +123,7 @@ const HeroSection = () => {
                   },
                 }}
               >
-                <b>View All Works</b>
+                <b>View&nbsp;All&nbsp;Works</b>
               </Button>
             </Box>
           </Grid>
@@ -111,7 +144,8 @@ const HeroSection = () => {
               src={profileImage}
               alt="Profile"
               sx={{
-                width: { xs: "80%", sm: "90%", md: "100%" },
+                width: { xs: "95%", sm: "95%", md: "100%" },
+                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
                 height: "auto",
                 borderRadius: "0%",
               }}
