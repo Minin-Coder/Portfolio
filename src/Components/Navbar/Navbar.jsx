@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -33,19 +34,24 @@ const Navbar = () => {
     <AppBar position="static" sx={{ bgcolor: "#121212", boxShadow: "none" }}>
       <Container maxWidth="lg">
         <Toolbar sx={{ display: "flex", justifyContent: "space-between" }}>
-          <Typography variant="h6" sx={{ fontWeight: "bold", color: "white" }}>
-            <Box
-              component="span"
-              sx={{
-                background:
-                  "linear-gradient(135deg, #007BFF, #00B4DB, #00B4DB)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
+          <NavLink to="/" style={{ textDecoration: "none" }}>
+            <Typography
+              variant="h6"
+              sx={{ fontWeight: "bold", color: "white" }}
             >
-              Farasat Ali
-            </Box>
-          </Typography>
+              <Box
+                component="span"
+                sx={{
+                  background:
+                    "linear-gradient(135deg, #007BFF, #00B4DB, #00B4DB)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                }}
+              >
+                Farasat Ali
+              </Box>
+            </Typography>
+          </NavLink>
 
           <Box
             sx={{
@@ -72,21 +78,23 @@ const Navbar = () => {
           </Box>
 
           <Box sx={{ display: { xs: "none", md: "block" } }}>
-            <Button
-              variant="contained"
-              sx={{
-                backgroundColor: "white",
-                color: "#0056b3",
-                borderRadius: "50px",
-                padding: "7px 30px",
-                "&:hover": {
-                  background: "linear-gradient(135deg, #0056b3, #008CBA)",
-                  color: "white",
-                },
-              }}
-            >
-              <b>Let’s talk</b>
-            </Button>
+            <Link to="/contact" style={{ textDecoration: "none" }}>
+              <Button
+                variant="contained"
+                sx={{
+                  backgroundColor: "white",
+                  color: "#0056b3",
+                  borderRadius: "50px",
+                  padding: "7px 30px",
+                  "&:hover": {
+                    background: "linear-gradient(135deg, #0056b3, #008CBA)",
+                    color: "white",
+                  },
+                }}
+              >
+                <b>Let’s talk</b>
+              </Button>
+            </Link>
           </Box>
 
           <IconButton

@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Grid, Typography, Container, Button } from "@mui/material";
 
 import profileImage from "../../assets/Profile.png";
+import { Link } from "react-router-dom";
 
 const HeroSection = () => {
   return (
@@ -88,43 +89,47 @@ const HeroSection = () => {
                 justifyContent: { xs: "center", md: "flex-start" },
               }}
             >
-              <Button
-                variant="contained"
-                sx={{
-                  background: "linear-gradient(135deg, #007BFF, #00B4DB)",
-                  color: "white",
-                  padding: "7px 30px",
-                  borderRadius: "50px",
-                  border: "1px solid transparent",
-                  width: { xs: "200px", md: "auto" },
-
-                  "&:hover": {
-                    background: "Transparent",
-                    color: "white",
-                    border: "1px solid white",
-                  },
-                }}
-              >
-                Get&nbsp;in&nbsp;Touch
-              </Button>
-              <Button
-                variant="contained"
-                sx={{
-                  backgroundColor: "transparent",
-                  color: "white",
-                  border: "1px solid white",
-                  padding: "7px 30px",
-                  width: { xs: "200px", md: "auto" },
-                  borderRadius: "50px",
-                  "&:hover": {
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  sx={{
                     background: "linear-gradient(135deg, #007BFF, #00B4DB)",
                     color: "white",
+                    padding: "7px 30px",
+                    borderRadius: "50px",
                     border: "1px solid transparent",
-                  },
-                }}
-              >
-                <b>View&nbsp;All&nbsp;Works</b>
-              </Button>
+                    width: { xs: "200px", md: "auto" },
+                    "&:hover": {
+                      background: "transparent",
+                      color: "white",
+                      border: "1px solid white",
+                    },
+                  }}
+                >
+                  Get&nbsp;in&nbsp;Touch
+                </Button>
+              </Link>
+
+              <Link to="/portfolio" style={{ textDecoration: "none" }}>
+                <Button
+                  variant="contained"
+                  sx={{
+                    backgroundColor: "transparent",
+                    color: "white",
+                    border: "1px solid white",
+                    padding: "7px 30px",
+                    width: { xs: "200px", md: "auto" },
+                    borderRadius: "50px",
+                    "&:hover": {
+                      background: "linear-gradient(135deg, #007BFF, #00B4DB)",
+                      color: "white",
+                      border: "1px solid transparent",
+                    },
+                  }}
+                >
+                  <b>View&nbsp;All&nbsp;Works</b>
+                </Button>
+              </Link>
             </Box>
           </Grid>
 
