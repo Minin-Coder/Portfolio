@@ -63,6 +63,24 @@ const Footer = () => {
               >
                 Home
               </NavLink>
+              <NavLink
+                to="/Services"
+                style={({ isActive }) => ({
+                  color: isActive ? "#007BFF" : "#fff",
+                  fontWeight: isActive ? "bold" : "normal",
+                  textDecoration: "none",
+                  transition: "color 0.3s",
+                })}
+                onMouseEnter={(e) => (e.target.style.color = "#007BFF")}
+                onMouseLeave={(e) =>
+                  (e.target.style.color =
+                    window.location.pathname === "/Services"
+                      ? "#007BFF"
+                      : "#fff")
+                }
+              >
+                Services
+              </NavLink>
 
               <NavLink
                 to="/portfolio"

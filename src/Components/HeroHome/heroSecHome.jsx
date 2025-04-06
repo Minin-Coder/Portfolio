@@ -59,7 +59,7 @@ const HeroSection = () => {
                 }}
               >
                 Hello, I'm Farasat,
-              </Box>{" "}
+              </Box>
               Web Developer based in Pakistan.
             </Typography>
 
