@@ -1,9 +1,18 @@
 import React from "react";
-import { Box, Grid, Typography, Container, Button } from "@mui/material";
-import Services1 from "../../assets/services1.png";
-import Services2 from "../../assets/services2.png";
-import Services3 from "../../assets/services3.png";
+import {
+  Box,
+  Grid,
+  Typography,
+  Container,
+  Button,
+  InputAdornment,
+  TextField,
+} from "@mui/material";
+
 import { Link } from "react-router-dom";
+import EmailIcon from "@mui/icons-material/Email";
+import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
+import LocalPhoneIcon from "@mui/icons-material/LocalPhone";
 
 const Contact = () => {
   return (
@@ -23,7 +32,7 @@ const Contact = () => {
           <Grid
             item
             xs={12}
-            md={12}
+            md={6}
             textAlign={{ xs: "center", md: "left" }}
             sx={{
               paddingLeft: { xs: "0px !important", md: "20px !important" },
@@ -45,10 +54,9 @@ const Contact = () => {
                 maxWidth: { xs: "400px", sm: "560px", md: "560px" },
                 marginLeft: { xs: "auto", md: "0px" },
                 marginRight: { xs: "auto", md: "0px" },
-                py: { xs: "10px", md: 7 },
+                py: "10px",
               }}
             >
-              Our&nbsp;
               <Box
                 component="span"
                 sx={{
@@ -57,288 +65,69 @@ const Contact = () => {
                   WebkitTextFillColor: "transparent",
                 }}
               >
-                Services
+                Get in touch
               </Box>
             </Typography>
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          spacing={4}
-          sx={{ width: "100%", margin: "0px 0px", alignItems: "center" }}
-        >
-          <Grid
-            item
-            xs={12}
-            md={6}
-            textAlign={{ xs: "center", md: "left" }}
-            sx={{
-              paddingLeft: { xs: "0px !important", md: "20px !important" },
-              paddingRight: { xs: "0px !important", md: "20px !important" },
-              paddingTop: { xs: "0px !important", md: "20px !important" },
-            }}
-          >
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: "bold",
-                color: "#fff",
-                fontSize: {
-                  xs: "1rem",
-                  sm: "2.0rem",
-                  md: "3.0rem",
-                  lg: "3,5rem",
-                },
-                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-                paddingTop: "20px",
-              }}
-            >
-              Front-End Web Development
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                mt: 1,
-                color: "#fff",
-                py: { xs: "5px", md: "20px" },
-                fontSize: { xs: "12px", sm: "16px", md: "1rem" },
-                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-              }}
-            >
-              I specialize in crafting responsive and visually appealing
-              websites using HTML, CSS, Bootstrap, and JavaScript. From clean
-              layouts to interactive features, I ensure your website delivers a
-              smooth and engaging user experience across all devices.
-            </Typography>
-            <Link
-              to="https://www.upwork.com/freelancers/~016d6aa0a0f59a29c3"
-              style={{ textDecoration: "none" }}
-            >
-              <Button
-                variant="contained"
-                sx={{
-                  background: "linear-gradient(135deg, #007BFF, #00B4DB)",
-                  color: "white",
-                  padding: "7px 30px",
-                  borderRadius: "50px",
-                  border: "1px solid transparent",
-                  width: { xs: "200px", md: "auto" },
-                  "&:hover": {
-                    background: "transparent",
-                    color: "white",
-                    border: "1px solid white",
-                  },
-                }}
-              >
-                Hire me
-              </Button>
-            </Link>
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            textAlign={{ xs: "center", md: "left" }}
-            sx={{
-              paddingLeft: { xs: "0px !important", md: "20px !important" },
-              paddingRight: { xs: "0px !important", md: "20px !important" },
-              paddingTop: { xs: "30px !important", md: "20px !important" },
-            }}
-          >
-            <img
-              src={Services1}
-              alt="Square Project"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </Grid>
-        </Grid>
 
-        <Grid
-          container
-          spacing={4}
-          sx={{
-            width: "100%",
-            margin: "0px 0px",
-            alignItems: "center",
-            py: { xs: 5, md: 10 },
-          }}
-          direction={{ xs: "column-reverse", md: "row" }}
-        >
-          <Grid
-            item
-            xs={12}
-            md={6}
-            textAlign={{ xs: "center", md: "left" }}
-            sx={{
-              paddingLeft: { xs: "0px !important", md: "20px !important" },
-              paddingRight: { xs: "0px !important", md: "20px !important" },
-              paddingTop: { xs: "30px !important", md: "20px !important" },
-            }}
-          >
-            <img
-              src={Services2}
-              alt="Square Project"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
-          </Grid>
-          <Grid
-            item
-            xs={12}
-            md={6}
-            textAlign={{ xs: "center", md: "left" }}
-            sx={{
-              paddingLeft: { xs: "0px !important", md: "20px !important" },
-              paddingRight: { xs: "0px !important", md: "20px !important" },
-              paddingTop: { xs: "0px !important", md: "20px !important" },
-            }}
-          >
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: "bold",
-                color: "#fff",
-                fontSize: {
-                  xs: "1rem",
-                  sm: "2.0rem",
-                  md: "3.0rem",
-                  lg: "3,5rem",
-                },
-                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-                paddingTop: "20px",
-              }}
-            >
-              Modern JavaScript Frameworks
-            </Typography>
             <Typography
               variant="body1"
               sx={{
-                mt: 1,
+                mt: 0,
                 color: "#fff",
                 py: { xs: "5px", md: "20px" },
-                fontSize: { xs: "12px", sm: "16px", md: "1rem" },
-                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
+                fontSize: { xs: "12px", sm: "16px", md: "18px" },
+                lineHeight: { xs: "16px", sm: "24px", md: "30px" },
+                maxWidth: { xs: "400px", sm: "400px", md: "400px" },
                 marginLeft: { xs: "auto", md: "0px" },
                 marginRight: { xs: "auto", md: "0px" },
+                fontWeight: "100",
+                paddingBottom: "50px !important",
               }}
             >
-              With a strong command of React.js, Next.js, MUI, and
-              React-Bootstrap, I build fast, scalable, and SEO-friendly web
-              applications. Whether it's a dynamic single-page app or a complex
-              interface, I focus on clean code and performance optimization.
+              Have a project in mind? Looking to partner or work together? Reach
+              out through the form and I'll get back to you in the next 48
+              hours.
             </Typography>
             <Link
               to="https://www.upwork.com/freelancers/~016d6aa0a0f59a29c3"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
-              <Button
-                variant="contained"
+              <EmailIcon />
+              <Typography
+                variant="body1"
                 sx={{
-                  background: "linear-gradient(135deg, #007BFF, #00B4DB)",
-                  color: "white",
-                  padding: "7px 30px",
-                  borderRadius: "50px",
-                  border: "1px solid transparent",
-                  width: { xs: "200px", md: "auto" },
-                  "&:hover": {
-                    background: "transparent",
-                    color: "white",
-                    border: "1px solid white",
-                  },
+                  mt: 0,
+                  py: 0,
+                  px: 2,
+                  color: "#fff",
+                  fontSize: { xs: "12px", sm: "16px", md: "1rem" },
+                  maxWidth: { xs: "400px", sm: "560px", md: "560px" },
                 }}
               >
-                Hire me
-              </Button>
+                i.farasatrehmat@gmail.com
+              </Typography>
             </Link>
-          </Grid>
-        </Grid>
-        <Grid
-          container
-          spacing={4}
-          sx={{ width: "100%", margin: "0px 0px", alignItems: "center" }}
-        >
-          <Grid
-            item
-            xs={12}
-            md={6}
-            textAlign={{ xs: "center", md: "left" }}
-            sx={{
-              paddingLeft: { xs: "0px !important", md: "20px !important" },
-              paddingRight: { xs: "0px !important", md: "20px !important" },
-              paddingTop: { xs: "0px !important", md: "20px !important" },
-            }}
-          >
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: "bold",
-                color: "#fff",
-                fontSize: {
-                  xs: "1rem",
-                  sm: "2.0rem",
-                  md: "3.0rem",
-                  lg: "3,5rem",
-                },
-                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-                paddingTop: "20px",
-              }}
-            >
-              Creative Design & CMS Solutions
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                mt: 1,
-                color: "#fff",
-                py: { xs: "5px", md: "20px" },
-                fontSize: { xs: "12px", sm: "16px", md: "1rem" },
-                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-              }}
-            >
-              Blending creativity with technology, I bring ideas to life using
-              Framer, WordPress, Webflow, and Figma. From interactive prototypes
-              to fully functional websites, I design and develop user-friendly
-              digital experiences that align with your brand.
-            </Typography>
+            <br />
             <Link
               to="https://www.upwork.com/freelancers/~016d6aa0a0f59a29c3"
-              style={{ textDecoration: "none" }}
+              style={{ textDecoration: "none", display: "flex" }}
             >
-              <Button
-                variant="contained"
+              <LocalPhoneIcon />
+              <Typography
+                variant="body1"
                 sx={{
-                  background: "linear-gradient(135deg, #007BFF, #00B4DB)",
-                  color: "white",
-                  padding: "7px 30px",
-                  borderRadius: "50px",
-                  border: "1px solid transparent",
-                  width: { xs: "200px", md: "auto" },
-                  "&:hover": {
-                    background: "transparent",
-                    color: "white",
-                    border: "1px solid white",
-                  },
+                  mt: 0,
+                  color: "#fff",
+                  py: 0,
+                  px: 2,
+                  fontSize: { xs: "12px", sm: "16px", md: "1rem" },
+                  maxWidth: { xs: "400px", sm: "560px", md: "560px" },
+                  marginLeft: { xs: "auto", md: "0px" },
+                  marginRight: { xs: "auto", md: "0px" },
                 }}
               >
-                Hire me
-              </Button>
+                +923498892570
+              </Typography>
             </Link>
           </Grid>
           <Grid
@@ -352,15 +141,105 @@ const Contact = () => {
               paddingTop: { xs: "30px !important", md: "20px !important" },
             }}
           >
-            <img
-              src={Services3}
-              alt="Square Project"
-              style={{
-                width: "100%",
-                height: "100%",
-                objectFit: "cover",
-              }}
-            />
+            <Box
+              component="form"
+              noValidate
+              autoComplete="off"
+              sx={{ color: "#fff" }}
+            >
+              <Typography sx={{ fontSize: "28px", fontWeight: 500, mb: 1 }}>
+                Your Name
+              </Typography>
+              <TextField
+                placeholder="Enter your name"
+                fullWidth
+                variant="outlined"
+                sx={{
+                  mb: 3,
+                  backgroundColor: "#1C1C22",
+                  input: { color: "#fff" },
+                  "& fieldset": { border: "none" },
+                }}
+              />
+
+              <Typography sx={{ fontSize: "28px", fontWeight: 500, mb: 1 }}>
+                Your E-mail
+              </Typography>
+              <TextField
+                placeholder="Enter your e-mail"
+                fullWidth
+                variant="outlined"
+                sx={{
+                  mb: 3,
+                  backgroundColor: "#1C1C22",
+                  input: { color: "#fff" },
+                  "& fieldset": { border: "none" },
+                }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <EmailIcon sx={{ color: "#888" }} />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+
+              <Typography sx={{ fontSize: "28px", fontWeight: 500, mb: 1 }}>
+                Your Budget
+              </Typography>
+              <TextField
+                placeholder="1k–3k"
+                fullWidth
+                variant="outlined"
+                sx={{
+                  mb: 3,
+                  backgroundColor: "#1C1C22",
+                  input: { color: "#fff" },
+                  "& fieldset": { border: "none" },
+                }}
+                InputProps={{
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <AttachMoneyIcon sx={{ color: "#888" }} />
+                    </InputAdornment>
+                  ),
+                }}
+              />
+
+              <Typography sx={{ fontSize: "28px", fontWeight: 500, mb: 1 }}>
+                Tell me a bit more what you are looking for?
+              </Typography>
+              <TextField
+                placeholder=""
+                multiline
+                minRows={5}
+                fullWidth
+                variant="outlined"
+                sx={{
+                  mb: 3,
+                  backgroundColor: "#1C1C22",
+                  textarea: { color: "#fff" },
+                  "& fieldset": { border: "none" },
+                }}
+              />
+
+              <Button
+                variant="contained"
+                fullWidth
+                sx={{
+                  background:
+                    "linear-gradient(90deg, #F857A6 0%, #FF5858 100%)",
+                  borderRadius: "50px",
+                  padding: "12px 0",
+                  fontWeight: "bold",
+                  fontSize: "16px",
+                  mt: 1,
+                  textTransform: "none",
+                }}
+              >
+                Submit Now
+              </Button>
+            </Box>
           </Grid>
         </Grid>
       </Container>
