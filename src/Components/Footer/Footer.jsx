@@ -83,25 +83,6 @@ const Footer = () => {
               </NavLink>
 
               <NavLink
-                to="/portfolio"
-                style={({ isActive }) => ({
-                  color: isActive ? "#007BFF" : "#fff",
-                  fontWeight: isActive ? "bold" : "normal",
-                  textDecoration: "none",
-                  transition: "color 0.3s",
-                })}
-                onMouseEnter={(e) => (e.target.style.color = "#007BFF")}
-                onMouseLeave={(e) =>
-                  (e.target.style.color =
-                    window.location.pathname === "/portfolio"
-                      ? "#007BFF"
-                      : "#fff")
-                }
-              >
-                Portfolio
-              </NavLink>
-
-              <NavLink
                 to="/contact"
                 style={({ isActive }) => ({
                   color: isActive ? "#007BFF" : "#fff",
