@@ -16,7 +16,8 @@ import AttachMoneyIcon from "@mui/icons-material/AttachMoney";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import Icon1 from "../../assets/contactIcons1.svg";
 import Icon2 from "../../assets/contactIcons2.svg";
-import emailjs from "emailjs-com"; // Import EmailJS
+import emailjs from "emailjs-com";
+import AnimatedSection from "../../Components/Animation/AnimatedSection.jsx";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -55,6 +56,24 @@ const Contact = () => {
       );
   };
 
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
+  };
+
+  const faqVariants = {
+    hidden: { opacity: 0, x: -50 },
+    visible: {
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
+  };
+
   return (
     <Box
       sx={{
@@ -80,54 +99,57 @@ const Contact = () => {
               paddingTop: { xs: "0px !important", md: "20px !important" },
             }}
           >
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: "bold",
-                color: "#fff",
-                fontSize: {
-                  xs: "1.5rem",
-                  sm: "2.5rem",
-                  md: "3.3rem",
-                  lg: "4rem",
-                },
-                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-                py: "10px",
-              }}
-            >
-              <Box
-                component="span"
+            <AnimatedSection variants={containerVariants}>
+              <Typography
+                variant="h3"
                 sx={{
-                  background: "linear-gradient(135deg, #007BFF, #00B4DB)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  fontWeight: "bold",
+                  color: "#fff",
+                  fontSize: {
+                    xs: "1.5rem",
+                    sm: "2.5rem",
+                    md: "3.3rem",
+                    lg: "4rem",
+                  },
+                  maxWidth: { xs: "400px", sm: "560px", md: "560px" },
+                  marginLeft: { xs: "auto", md: "0px" },
+                  marginRight: { xs: "auto", md: "0px" },
+                  py: "10px",
                 }}
               >
-                Get in touch
-              </Box>
-            </Typography>
-
-            <Typography
-              variant="body1"
-              sx={{
-                mt: 0,
-                color: "#fff",
-                py: { xs: "5px", md: "20px" },
-                fontSize: { xs: "12px", sm: "16px", md: "18px" },
-                lineHeight: { xs: "16px", sm: "24px", md: "30px" },
-                maxWidth: { xs: "400px", sm: "400px", md: "400px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-                fontWeight: "100",
-                paddingBottom: "50px !important",
-              }}
-            >
-              Have a project in mind? Looking to partner or work together? Reach
-              out through the form and I'll get back to you in the next 48
-              hours.
-            </Typography>
+                <Box
+                  component="span"
+                  sx={{
+                    background: "linear-gradient(135deg, #007BFF, #00B4DB)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  Get in touch
+                </Box>
+              </Typography>
+            </AnimatedSection>
+            <AnimatedSection variants={containerVariants}>
+              <Typography
+                variant="body1"
+                sx={{
+                  mt: 0,
+                  color: "#fff",
+                  py: { xs: "5px", md: "20px" },
+                  fontSize: { xs: "12px", sm: "16px", md: "18px" },
+                  lineHeight: { xs: "16px", sm: "24px", md: "30px" },
+                  maxWidth: { xs: "400px", sm: "400px", md: "400px" },
+                  marginLeft: { xs: "auto", md: "0px" },
+                  marginRight: { xs: "auto", md: "0px" },
+                  fontWeight: "100",
+                  paddingBottom: "50px !important",
+                }}
+              >
+                Have a project in mind? Looking to partner or work together?
+                Reach out through the form and I'll get back to you in the next
+                48 hours.
+              </Typography>
+            </AnimatedSection>
             <Box
               sx={{
                 display: "flex",
@@ -328,52 +350,56 @@ const Contact = () => {
               paddingRight: { xs: "0px !important", md: "20px !important" },
             }}
           >
-            <Typography
-              variant="h3"
-              sx={{
-                fontWeight: "bold",
-                color: "#fff",
-                fontSize: {
-                  xs: "1.5rem",
-                  sm: "2.5rem",
-                  md: "3rem",
-                  lg: "3.5rem",
-                },
-                maxWidth: { xs: "400px", sm: "560px", md: "560px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-                py: "10px",
-              }}
-            >
-              Frequently Asked <br />
-              <Box
-                component="span"
+            <AnimatedSection variants={faqVariants}>
+              <Typography
+                variant="h3"
                 sx={{
-                  background: "linear-gradient(135deg, #007BFF, #00B4DB)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
+                  fontWeight: "bold",
+                  color: "#fff",
+                  fontSize: {
+                    xs: "1.5rem",
+                    sm: "2.5rem",
+                    md: "3rem",
+                    lg: "3.5rem",
+                  },
+                  maxWidth: { xs: "400px", sm: "560px", md: "560px" },
+                  marginLeft: { xs: "auto", md: "0px" },
+                  marginRight: { xs: "auto", md: "0px" },
+                  py: "10px",
                 }}
               >
-                Questions
-              </Box>
-            </Typography>
-            <Typography
-              variant="body1"
-              sx={{
-                mt: 0,
-                color: "#fff",
-                py: { xs: "5px", md: "20px" },
-                fontSize: { xs: "12px", sm: "16px", md: "18px" },
-                lineHeight: { xs: "16px", sm: "24px", md: "30px" },
-                maxWidth: { xs: "400px", sm: "400px", md: "400px" },
-                marginLeft: { xs: "auto", md: "0px" },
-                marginRight: { xs: "auto", md: "0px" },
-                fontWeight: "100",
-                paddingBottom: "50px !important",
-              }}
-            >
-              Answers to the burning questions in your mind.
-            </Typography>
+                Frequently Asked <br />
+                <Box
+                  component="span"
+                  sx={{
+                    background: "linear-gradient(135deg, #007BFF, #00B4DB)",
+                    WebkitBackgroundClip: "text",
+                    WebkitTextFillColor: "transparent",
+                  }}
+                >
+                  Questions
+                </Box>
+              </Typography>
+            </AnimatedSection>
+            <AnimatedSection variants={faqVariants}>
+              <Typography
+                variant="body1"
+                sx={{
+                  mt: 0,
+                  color: "#fff",
+                  py: { xs: "5px", md: "20px" },
+                  fontSize: { xs: "12px", sm: "16px", md: "18px" },
+                  lineHeight: { xs: "16px", sm: "24px", md: "30px" },
+                  maxWidth: { xs: "400px", sm: "400px", md: "400px" },
+                  marginLeft: { xs: "auto", md: "0px" },
+                  marginRight: { xs: "auto", md: "0px" },
+                  fontWeight: "100",
+                  paddingBottom: "50px !important",
+                }}
+              >
+                Answers to the burning questions in your mind.
+              </Typography>
+            </AnimatedSection>
           </Grid>
           <Grid
             item
@@ -384,66 +410,68 @@ const Contact = () => {
               paddingRight: { xs: "0px !important", md: "20px !important" },
             }}
           >
-            <Box>
-              {[
-                {
-                  question: "How long does a website take to build?",
-                  answer:
-                    "The timeline depends on the complexity of the website. On average, it takes 2-6 weeks to complete.",
-                },
-                {
-                  question: "How much does a website cost?",
-                  answer:
-                    "The cost varies based on the features and design requirements. Contact me for a detailed quote.",
-                },
-                {
-                  question: "I don’t have a design, can you build it for me?",
-                  answer:
-                    "Absolutely! I can create a custom design tailored to your needs and preferences.",
-                },
-                {
-                  question: "Do you provide SEO as well?",
-                  answer:
-                    "Yes, I offer basic SEO services to ensure your website is optimized for search engines.",
-                },
-                {
-                  question: "Will my website load quickly?",
-                  answer:
-                    "Yes, I prioritize performance and ensure your website is optimized for fast loading times.",
-                },
-              ].map((faq, index) => (
-                <Accordion
-                  key={index}
-                  sx={{
-                    backgroundColor: "transparent", // Set background to transparent
-                    color: "#fff",
-                    mb: 2,
-                    borderBottom: "1px solid #444", // Add bottom border
-                    "&:before": { display: "none" }, // Remove default divider
-                    boxShadow: "none", // Remove shadow
-                  }}
-                >
-                  <AccordionSummary
-                    expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+            <AnimatedSection variants={faqVariants}>
+              <Box>
+                {[
+                  {
+                    question: "How long does a website take to build?",
+                    answer:
+                      "The timeline depends on the complexity of the website. On average, it takes 2-6 weeks to complete.",
+                  },
+                  {
+                    question: "How much does a website cost?",
+                    answer:
+                      "The cost varies based on the features and design requirements. Contact me for a detailed quote.",
+                  },
+                  {
+                    question: "I don’t have a design, can you build it for me?",
+                    answer:
+                      "Absolutely! I can create a custom design tailored to your needs and preferences.",
+                  },
+                  {
+                    question: "Do you provide SEO as well?",
+                    answer:
+                      "Yes, I offer basic SEO services to ensure your website is optimized for search engines.",
+                  },
+                  {
+                    question: "Will my website load quickly?",
+                    answer:
+                      "Yes, I prioritize performance and ensure your website is optimized for fast loading times.",
+                  },
+                ].map((faq, index) => (
+                  <Accordion
+                    key={index}
                     sx={{
-                      fontSize: "16px",
-                      fontWeight: "bold",
+                      backgroundColor: "transparent",
+                      color: "#fff",
+                      mb: 2,
+                      borderBottom: "1px solid #444",
+                      "&:before": { display: "none" },
+                      boxShadow: "none",
                     }}
                   >
-                    {faq.question}
-                  </AccordionSummary>
-                  <AccordionDetails
-                    sx={{
-                      fontSize: "16px",
-                      lineHeight: "24px",
-                      color: "#ccc",
-                    }}
-                  >
-                    {faq.answer}
-                  </AccordionDetails>
-                </Accordion>
-              ))}
-            </Box>
+                    <AccordionSummary
+                      expandIcon={<ExpandMoreIcon sx={{ color: "#fff" }} />}
+                      sx={{
+                        fontSize: "16px",
+                        fontWeight: "bold",
+                      }}
+                    >
+                      {faq.question}
+                    </AccordionSummary>
+                    <AccordionDetails
+                      sx={{
+                        fontSize: "16px",
+                        lineHeight: "24px",
+                        color: "#ccc",
+                      }}
+                    >
+                      {faq.answer}
+                    </AccordionDetails>
+                  </Accordion>
+                ))}
+              </Box>
+            </AnimatedSection>
           </Grid>
         </Grid>
       </Container>
